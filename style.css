@@ -1,0 +1,114 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 32px;
+}
+
+.accordion-flush {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    background: linear-gradient(93.38deg, #163A7D 2.55%, #1F2F53 94.1%), #F6F6F6 !important;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a2a3a;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+.accordion-button:not(.collapsed) {
+    background: #163A7D;
+    color: #fff;
+}
+
+.accordion-button.collapsed {
+    background: #f6f6f6;
+
+    color: #1a2a3a;
+}
+
+.accordion-button:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%231a2a3a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E") no-repeat center center;
+    background-size: contain;
+    transition: transform 0.2s, filter 0.2s;
+    vertical-align: middle;
+}
+.accordion-button:not(.collapsed):after {
+    transform: rotate(-180deg);
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E") no-repeat center center;
+    background-size: contain;
+}
+
+.accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    background: #163A7D;
+    color: #fff;
+    transition: max-height 0.3s ease;
+
+    overflow: hidden;
+}
+
+.accordion-collapse.show {
+    max-height: 500px;
+    /* Достаточно для текста */
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-body {
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.accordion-body p {
+    margin: 0;
+}
+
+.accordion-body a {
+
+    font-size: 16px;
+    color: #fff;
+    transition: color 0.2s;
+    line-height: 1.5;
+
+
+}
+
+.accordion-body a:hover {
+    color: #B9C4D8;
+
+}
